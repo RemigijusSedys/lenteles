@@ -1,0 +1,18 @@
+table {
+   counter-reset: rowNumber -1;
+}
+
+table tr {
+   counter-increment: rowNumber;
+}
+
+table tr td:first-child::before {
+   content: counter(rowNumber);
+   min-width: 1em;
+   padding: 10px;
+}
+
+th, td {
+   border: 1px solid #000;
+   padding: 10px;
+}
